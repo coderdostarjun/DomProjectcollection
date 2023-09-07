@@ -1,27 +1,17 @@
-let isstatus=document.querySelector(".st");
-let btn=document.querySelector("#add");
-// let remove=document.querySelector("#remove");
-let check=0;
-btn.addEventListener("click",()=>
+let con=document.querySelector("#container");
+let love=document.querySelector("i");
+con.addEventListener("click",function()
 {
-    if(check==0)
-    {
-        isstatus.innerHTML="Friend";
-        isstatus.style.color="green";
-        btn.innerHTML="Remove Friend"
-        check=1;
-    }
-    else{
-        isstatus.innerHTML="Stranger";
-      isstatus.style.color="red";
-      check=0;
-      btn.innerHTML="Add Friend";
-    }
-   
+   love.style.transform="scale(1) translate(-50%,-50%)";
+   love.style.opacity=0.8;
+   setTimeout(function()
+   {
+    love.style.opacity=0;
+   },1000)
+   setTimeout(function()
+{
+    love.style.transform="scale(0) translate(-50%,-50%)";
+},2000)
 })
 
-// remove.addEventListener("click",()=>
-// {
-//     isstatus.innerHTML="Stranger";
-//     isstatus.style.color="red";
-// })
+//settimeout mean delay i.e settimeout bhitra function hunxa jasle kehi time paxi tesma bhako code print garxa print garna delay garxa
